@@ -130,7 +130,7 @@
         <layout suffix=".">
             <text macro="citation-number"/>
             <choose>
-                <if type="bill book document graphic legal_case legislation motion_picture report song" match="any">
+                <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
                     <group delimiter=". ">
                         <text macro="author"/>
                         <group delimiter=" ">
