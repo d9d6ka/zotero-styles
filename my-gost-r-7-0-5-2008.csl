@@ -4,8 +4,10 @@
         <title>ГОСТ Р 7.0.5-2008</title>
         <title-short>ГОСТ Р 7.0.5-2008</title-short>
         <id>http://www.zotero.org/styles/my-gost-r-7-0-5-2008</id>
+        
         <link href="http://protect.gost.ru/document.aspx?control=7&amp;id=173511" rel="documentation"/>
         <link href="http://standartgost.ru/g/%D0%93%D0%9E%D0%A1%D0%A2_%D0%A0_7.0.5-2008" rel="documentation"/>
+        
         <author>
             <name>Andrey Chetverikov</name>
             <email>andrey@chetvericov.ru</email>
@@ -15,6 +17,7 @@
             <name>Vadim Zyamalov</name>
             <email>vadim.zyamalov@gmail.com</email>
         </author>
+        
         <category citation-format="author-date"/>
         <category field="generic-base"/>
         <summary>Russian GOST-2008 style.</summary>
