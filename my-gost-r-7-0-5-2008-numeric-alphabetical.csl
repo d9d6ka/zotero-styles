@@ -119,22 +119,15 @@
         </layout>
     </citation>
 
-    <bibliography et-al-min="4" et-al-use-first="1">
-        <sort>
-            <key variable="language" sort="descending"/>
-            <key variable="author"/>
-            <key macro="year-date"/>
-            <key variable="issued"/>
-        </sort>
-
+    <bibliography et-al-min="4" et-al-use-first="1" entry-spacing="0" second-field-align="flush">
         <layout suffix=".">
             <text macro="citation-number"/>
             <choose>
                 <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
-                    <group delimiter=". ">
-                        <text macro="author"/>
-                        <group delimiter=" ">
-                            <text macro="title"/>
+                    <text macro="title"/>
+                    <group delimiter=". – " prefix=" " suffix=".">
+                        <group prefix="/ " delimiter="; ">
+                            <text macro="author"/>
                             <text macro="editor"/>
                         </group>
                         <text macro="publisher"/>
@@ -143,13 +136,15 @@
                 </if>
                 
                 <else-if type="chapter paper-conference" match="any">
-                    <group prefix=" " delimiter=". ">
+                    <group delimiter=". ">
                         <text macro="author"/>
-                        <group delimiter=" ">
-                            <text macro="title"/>
-                            <text variable="container-title" prefix="// "/>
-                            <text variable="collection-title" prefix=" " suffix="."/>
-                            <text macro="editor"/>
+                        <text macro="title"/>
+                    </group>
+                    <group delimiter=". – " prefix=" " suffix=".">
+                        <group prefix="// " delimiter=" " suffix=".">
+                            <text variable="container-title"/>
+                            <text variable="collection-title"/>
+                            <text macro="editor" prefix="/ "/>
                         </group>
                         <text macro="publisher"/>
                         <text prefix="С. " variable="page"/>
@@ -161,17 +156,19 @@
                     <text prefix=" " macro="access"/>
                 </else-if>
                 
-                <else-if type="article article-journal article-magazine article-newspaper broadcast interview manuscript map patent personal_communication speech thesis" match="any">
+                <else-if type="article-journal article-magazine article-newspaper broadcast interview manuscript map patent personal_communication speech thesis" match="any">
                     <group delimiter=". ">
                         <text macro="author"/>
                         <text macro="title"/>
                     </group>
-                    <group delimiter=". " prefix=" " suffix=".">
-                        <group prefix="// " delimiter=". ">
-                            <text variable="container-title"/>
+                    <group delimiter=". – " prefix=" " suffix=".">
+                        <group prefix="// " delimiter=". – ">
+                            <text variable="container-title" form="short"/>
                             <text macro="year-date"/>
-                            <text variable="volume" prefix="Т. "/>
-                            <text variable="issue" prefix="№ "/>
+                            <group delimiter=". ">
+                                <text variable="volume" prefix="Т. "/>
+                                <text variable="issue" prefix="№ "/>
+                            </group>
                         </group>
                         <text variable="page" prefix="С. "/>
                     </group>
@@ -183,11 +180,13 @@
                         <text macro="title"/>
                     </group>
                     <group delimiter=". " prefix=" " suffix=".">
-                        <group prefix="// " delimiter=". ">
+                        <group prefix="// " delimiter=". – ">
                             <text variable="container-title" form="short"/>
                             <text macro="year-date"/>
-                            <text variable="volume" prefix="Т. "/>
-                            <text variable="issue" prefix="№ "/>
+                            <group delimiter=". ">
+                                <text variable="volume" prefix="Т. "/>
+                                <text variable="issue" prefix="№ "/>
+                            </group>
                         </group>
                         <text variable="page" prefix="С. "/>
                     </group>
