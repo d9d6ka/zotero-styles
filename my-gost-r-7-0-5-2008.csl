@@ -52,7 +52,7 @@
     </locale>
     
     <macro name="editor">
-        <names variable="editor" prefix="/ под ред. " delimiter=", " suffix=".">
+        <names variable="editor" delimiter=", " suffix=".">
             <label prefix=" " suffix=" "/>
             <name initialize-with=". " sort-separator=", " delimiter=", " delimiter-precedes-last="always"/>
         </names>
@@ -71,14 +71,11 @@
         </names>
     </macro>
 
-    <macro name="author_short">
-        <names variable="author">
-            <name form="short" name-as-sort-order="all" sort-separator=" " delimiter=", " delimiter-precedes-last="always"/>
-            <substitute>
-                <text variable="title"/>
-            </substitute>
+    <macro name="container-author">
+        <names variable="container-author">
+            <name name-as-sort-order="all" sort-separator=" " initialize-with=". " delimiter=", " delimiter-precedes-last="always"/>
         </names>
-  </macro>
+    </macro>
 
     <macro name="access">
         <group>
@@ -140,7 +137,7 @@
                 <if type="bill book graphic legal_case legislation motion_picture report song" match="any">
                     <text macro="title"/>
                     <group delimiter=". – " prefix=" " suffix=".">
-                        <group prefix="/ " delimiter="; ">
+                        <group prefix="/ " delimiter=" ; ">
                             <text macro="author"/>
                             <text macro="editor"/>
                         </group>
@@ -158,7 +155,10 @@
                         <group prefix="// " delimiter=" " suffix=".">
                             <text variable="container-title"/>
                             <text variable="collection-title"/>
-                            <text macro="editor" prefix="/ "/>
+                            <group prefix="/ " delimeter=" ; ">
+                                <text macro="container-author">
+                                <text macro="editor"/>
+                            </group>
                         </group>
                         <text macro="publisher"/>
                         <text prefix="С. " variable="page"/>

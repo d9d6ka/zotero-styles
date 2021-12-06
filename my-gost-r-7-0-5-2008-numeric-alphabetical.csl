@@ -50,7 +50,7 @@
     </locale>
     
     <macro name="editor">
-        <names variable="editor" prefix="/ под ред. " delimiter=", " suffix=".">
+        <names variable="editor" delimiter=", " suffix=".">
             <label prefix=" " suffix=" "/>
             <name initialize-with=". " sort-separator=", " delimiter=", " delimiter-precedes-last="always"/>
         </names>
@@ -65,6 +65,12 @@
 
     <macro name="author">
         <names variable="author">
+            <name name-as-sort-order="all" sort-separator=" " initialize-with=". " delimiter=", " delimiter-precedes-last="always"/>
+        </names>
+    </macro>
+
+    <macro name="container-author">
+        <names variable="container-author">
             <name name-as-sort-order="all" sort-separator=" " initialize-with=". " delimiter=", " delimiter-precedes-last="always"/>
         </names>
     </macro>
@@ -110,7 +116,7 @@
         <sort>
             <key variable="citation-number"/>
         </sort>
-        <layout prefix="[" suffix="]" delimiter="; ">
+        <layout prefix="[" suffix="]" delimiter=" ; ">
             <text variable="citation-number"/>
             <group prefix=",">
                 <label plural="never" prefix=" " variable="locator" form="short"/>
@@ -144,7 +150,10 @@
                         <group prefix="// " delimiter=" " suffix=".">
                             <text variable="container-title"/>
                             <text variable="collection-title"/>
-                            <text macro="editor" prefix="/ "/>
+                            <group prefix="/ " delimeter=" ; ">
+                                <text macro="container-author">
+                                <text macro="editor"/>
+                            </group>
                         </group>
                         <text macro="publisher"/>
                         <text prefix="С. " variable="page"/>
