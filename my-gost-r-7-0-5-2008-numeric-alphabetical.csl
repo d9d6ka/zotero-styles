@@ -151,7 +151,7 @@
                             <text variable="container-title"/>
                             <text variable="collection-title"/>
                             <group prefix="/ " delimeter=" ; ">
-                                <text macro="container-author">
+                                <text macro="container-author"/>
                                 <text macro="editor"/>
                             </group>
                         </group>
