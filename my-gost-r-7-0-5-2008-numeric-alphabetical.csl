@@ -151,7 +151,7 @@
                 </if>
                 
                 <else-if type="chapter paper-conference" match="any">
-                    <group delimiter=". ">
+                    <group delimiter=". " suffix=".">
                         <text macro="author"/>
                         <text macro="title"/>
                     </group>
