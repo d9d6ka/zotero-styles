@@ -123,7 +123,9 @@
     
     <citation collapse="citation-number">
         <sort>
-            <key variable="citation-number"/>
+            <key variable="language" sort="descending"/>
+            <key variable="author"/>
+            <key variable="issued"/>
         </sort>
         <layout prefix="[" suffix="]" delimiter=" ; ">
             <text variable="citation-number"/>
