@@ -71,6 +71,15 @@
         </names>
     </macro>
 
+    <macro name="author_short">
+        <names variable="author">
+            <name form="short" name-as-sort-order="all" sort-separator=" " delimiter=", " delimiter-precedes-last="always"/>
+            <substitute>
+                <text variable="title"/>
+            </substitute>
+        </names>
+    </macro>
+    
     <macro name="container-author">
         <names variable="container-author">
             <name name-as-sort-order="all" sort-separator=" " initialize-with=". " delimiter=", " delimiter-precedes-last="always"/>
