@@ -123,11 +123,11 @@
         <text variable="citation-number" suffix=". "/>
     </macro>
     
-    <citation et-al-min="4" et-al-use-first="1" disambiguate-add-year-suffix="true">
+    <citation et-al-min="4" et-al-use-first="1" disambiguate-add-year-suffix="true" collapse="year">
         <sort>
             <key variable="language" sort="descending"/>
-            <key variable="author"/>
-            <key variable="issued"/>
+            <key macro="author"/>
+            <key macro="year-date"/>
         </sort>
         <layout prefix="[" suffix="]" delimiter="; ">
             <text macro="author_short" suffix=", "/>
