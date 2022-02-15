@@ -106,11 +106,13 @@
     </macro>
 
     <macro name="publisher">
-        <group suffix=",">
-            <text variable="publisher-place" suffix=":"/>
-            <text variable="publisher" prefix=" "/>
+        <group suffix=", ">
+            <group delimiter=":">
+                <text variable="publisher-place"/>
+                <text variable="publisher" prefix=" "/>
+            </group>
         </group>
-        <text macro="year-date" prefix=" " suffix="."/>
+        <text macro="year-date" suffix="."/>
     </macro>
 
     <macro name="year-date">
