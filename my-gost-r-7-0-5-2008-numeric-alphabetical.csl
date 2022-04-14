@@ -129,7 +129,7 @@
             <key variable="author"/>
             <key variable="issued"/>
         </sort>
-        <layout prefix="[" suffix="]" delimiter=" ; ">
+        <layout prefix="[" suffix="]" delimiter="; ">
             <text variable="citation-number"/>
             <group prefix=",">
                 <label plural="never" prefix=" " variable="locator" form="short"/>
@@ -139,6 +139,11 @@
     </citation>
 
     <bibliography et-al-min="4" et-al-use-first="1" entry-spacing="0" second-field-align="flush">
+        <sort>
+            <key variable="language" sort="descending"/>
+            <key variable="author"/>
+            <key variable="issued"/>
+        </sort>
         <layout suffix=".">
             <text macro="citation-number"/>
             <choose>
