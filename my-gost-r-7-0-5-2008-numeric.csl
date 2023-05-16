@@ -4,7 +4,7 @@
         <title>ГОСТ Р 7.0.5-2008 (нумерованные ссылки, в порядке появления)</title>
         <title-short>ГОСТ Р 7.0.5-2008</title-short>
         <id>http://www.zotero.org/styles/my-gost-r-7-0-5-2008-numeric</id>
-        
+
         <link href="http://protect.gost.ru/document.aspx?control=7&amp;id=173511" rel="documentation"/>
         <link href="http://standartgost.ru/g/%D0%93%D0%9E%D0%A1%D0%A2_%D0%A0_7.0.5-2008" rel="documentation"/>
 
@@ -24,7 +24,7 @@
         <updated>2021-10-19T12:00:00+00:00</updated>
         <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
     </info>
-    
+
     <locale>
         <terms>
             <term name="issue" form="symbol">№</term>
@@ -36,7 +36,7 @@
             <term name="et-al"> и др.</term>
             <term name="editor">под ред.</term>
             <term name="accessed">дата обращения</term>
-            <term name="page" form="short">с.</term>
+            <term name="page" form="short">с. </term>
             <term name="translator">перевод</term>
         </terms>
     </locale>
@@ -46,11 +46,11 @@
             <term name="et-al"> и др.</term>
             <term name="editor">под ред.</term>
             <term name="accessed">дата обращения</term>
-            <term name="page" form="short">с.</term>
+            <term name="page" form="short">с. </term>
             <term name="translator">перевод</term>
         </terms>
     </locale>
-    
+
     <macro name="editor">
         <names variable="editor" delimiter=", " suffix=".">
             <label prefix=" " suffix=" "/>
@@ -124,7 +124,7 @@
     <macro name="citation-number">
         <text variable="citation-number" suffix=". "/>
     </macro>
-    
+
     <citation collapse="citation-number">
         <sort>
             <key variable="citation-number"/>
@@ -133,11 +133,11 @@
             <text variable="citation-number"/>
             <group prefix=",">
                 <label plural="never" prefix=" " variable="locator" form="short"/>
-                <text variable="locator" prefix=", с. "/>
+                <text variable="locator"/>
             </group>
         </layout>
     </citation>
-    
+
     <bibliography et-al-min="4" et-al-use-first="1" entry-spacing="0" second-field-align="flush">
         <layout suffix=".">
             <text macro="citation-number"/>
@@ -154,7 +154,7 @@
                     </group>
                     <text variable="collection-title" prefix=" (" suffix=")"/>
                 </if>
-                
+
                 <else-if type="chapter paper-conference" match="any">
                     <group delimiter=". " suffix=".">
                         <text macro="author"/>
@@ -173,12 +173,12 @@
                         <text prefix="С. " variable="page"/>
                     </group>
                 </else-if>
-                
+
                 <else-if type="webpage post-weblog" match="any">
                     <text macro="title" prefix=" "/>
                     <text prefix=" " macro="access"/>
                 </else-if>
-                
+
                 <else-if type="article-journal article-magazine article-newspaper broadcast interview manuscript map patent personal_communication speech thesis" match="any">
                     <group delimiter=". ">
                         <text macro="author"/>
@@ -196,7 +196,7 @@
                         <text variable="page" prefix="С. "/>
                     </group>
                 </else-if>
-                
+
                 <else>
                     <group delimiter=". ">
                         <text macro="author"/>
