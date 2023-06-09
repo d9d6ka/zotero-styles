@@ -1,0 +1,3 @@
+[submodule "GOST-styles-for-Zotero"]
+	path = GOST-styles-for-Zotero
+	url = git@github.com:vadim-zyamalov/GOST-styles-for-Zotero.git
